@@ -39,6 +39,9 @@ $(call inherit-product, device/lge/geeb/full_geeb.mk)
 # CM Package Extras
 # -include vendor/pa/packages/cm.mk
 
+# Include my extra sounds package
+include vendor/pa/config/hn_sounds.mk
+
 # Override AOSP build properties
 PRODUCT_NAME := pa_geeb
 PRODUCT_BRAND := lge
