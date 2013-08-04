@@ -27,11 +27,17 @@ OVERLAY_TARGET := pa_xhdpi
 # Include ParanoidAndroid common configuration
 include vendor/pa/config/pa_common.mk
 
+# Enhanced NFC
+$(call inherit-product, vendor/pa/config/nfc_enhanced.mk)
+
 # Inherit AOSP device configuration
 $(call inherit-product, device/lge/geeb/full_geeb.mk)
 
 # Product Package Extras - Repos can be added manually or via addprojects.py
 -include vendor/pa/packages/geeb.mk
+
+PRODUCT_COPY_FILES += \
+    vendor/pa/prebuilt/common/apk/TricksterMod.apk:system/app/TricksterMod.apk
 
 # Override AOSP build properties
 PRODUCT_NAME := pa_geeb
