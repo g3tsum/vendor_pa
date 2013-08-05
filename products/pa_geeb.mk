@@ -24,6 +24,9 @@ OVERLAY_TARGET := pa_xhdpi
 # Build paprefs from sources
 # PREFS_FROM_SOURCE ?= true
 
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/pa/config/gsm.mk)
+
 # Include ParanoidAndroid common configuration
 include vendor/pa/config/pa_common.mk
 
@@ -52,4 +55,3 @@ GET_PROJECT_RMS := $(shell vendor/pa/tools/removeprojects.py $(PRODUCT_NAME))
 GET_PROJECT_ADDS := $(shell vendor/pa/tools/addprojects.py $(PRODUCT_NAME))
 
 endif
-
