@@ -24,6 +24,9 @@ OVERLAY_TARGET := pa_xxhdpi
 # Build paprefs from sources
 PREFS_FROM_SOURCE := true
 
+# Specify phone tech before including full_phone
+$(call inherit-product, vendor/pa/config/gsm.mk)
+
 # Include ParanoidAndroid common configuration
 include vendor/pa/config/pa_common.mk
 
