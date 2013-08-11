@@ -30,20 +30,20 @@ PRODUCT_COPY_FILES += \
 $(call inherit-product, frameworks/base/data/videos/VideoPackage2.mk)
 
 # Exclude prebuilt paprefs from builds if the flag is set
-ifneq ($(PREFS_FROM_SOURCE),true)
+# ifneq ($(PREFS_FROM_SOURCE),true)
     PRODUCT_COPY_FILES += \
         vendor/pa/prebuilt/common/apk/ParanoidPreferences.apk:system/app/ParanoidPreferences.apk
-else
+#else
     # Build paprefs from sources
-    PRODUCT_PACKAGES += \
-        ParanoidPreferences
-endif
+#    PRODUCT_PACKAGES += \
+#        ParanoidPreferences
+# endif
 
 # ParanoidOTA
-ifneq ($(NO_OTA_BUILD),true)
-    PRODUCT_PACKAGES += \
-        ParanoidOTA
-endif
+# ifneq ($(NO_OTA_BUILD),true)
+#    PRODUCT_PACKAGES += \
+#        ParanoidOTA
+# endif
 
 ifneq ($(PARANOID_BOOTANIMATION_NAME),)
     PRODUCT_COPY_FILES += \
