@@ -106,3 +106,6 @@ endif
 ifeq (pa_umts_spyder,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_umts_spyder.mk
 endif
+ifeq (pa_geeb,$(TARGET_PRODUCT))
+    PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geeb.mk
+endif
