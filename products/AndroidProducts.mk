@@ -109,6 +109,6 @@ endif
 ifeq (pa_geeb,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geeb.mk
 endif
-ifeq (pa_geeb,$(TARGET_PRODUCT))
+ifeq (pa_geespr,$(TARGET_PRODUCT))
     PRODUCT_MAKEFILES += $(LOCAL_DIR)/pa_geespr.mk
 endif
